@@ -1,0 +1,62 @@
+{
+  "id": "cafe",
+  "title": "Café Loki",
+  "language": "is",
+  "setting": "A small café near Hallgrímskirkja, Reykjavík. 11:30. You order traditional Icelandic food and chat with the server.",
+  "npc": {
+    "name": "Sigurður",
+    "personality": "friendly café server, proud of Icelandic cuisine. Happy to explain dishes.",
+    "initialLine": "Velkomin! Hvað get ég boðið þér?",
+    "initialTranslation": "Welcome! What can I offer you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Þú ert á kaffihús nálægt Hallgrímskirkju í Reykjavík. Þú pantar íslenskan mat og spjallar við þjóninn.",
+  "debriefEn": "You are at a café near Hallgrímskirkja in Reykjavík. You order Icelandic food and chat with the server.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the server and ask what they recommend from the menu.",
+      "prompt": {
+        "ru": "Góðan dag. Hvað mælirðu með á matseðlinum?",
+        "phonetic": "GOH-than day. Kvath MIGH-lir-thu meth ow MAT-seth-li-num?",
+        "en": "Good day. What do you recommend on the menu?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask what soup is available today.",
+      "prompt": {
+        "ru": "Hvaða súpa er í dag?",
+        "phonetic": "KVAH-tha SOO-pa er ee day?",
+        "en": "What soup is today?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Order the lamb soup and a coffee.",
+      "prompt": {
+        "ru": "Ég ætla að fá kjötsúpu og kaffi, takk.",
+        "phonetic": "Yeg AY-tla ath fow KYOT-soo-pu ok KAF-fi, tahk.",
+        "en": "I'd like to have lamb soup and coffee, thanks."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask if the bread is homemade.",
+      "prompt": {
+        "ru": "Er brauðið heimabakað?",
+        "phonetic": "Er BROY-thith HAY-ma-bah-kath?",
+        "en": "Is the bread homemade?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Ask for the bill and compliment the food.",
+      "prompt": {
+        "ru": "Reikninginn, takk. Maturinn var frábær!",
+        "phonetic": "RAYK-ning-kin, tahk. MA-tu-rin var FROW-bir!",
+        "en": "The bill, please. The food was excellent!"
+      }
+    }
+  ]
+}

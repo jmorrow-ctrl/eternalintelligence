@@ -1,0 +1,62 @@
+{
+  "id": "ubahn",
+  "title": "U-Bahn Alexanderplatz",
+  "language": "de",
+  "setting": "Alexanderplatz U-Bahn station, Berlin. 09:30. You are a tourist trying to find your way to the Brandenburg Gate.",
+  "npc": {
+    "name": "Frau Schmidt",
+    "personality": "helpful but direct Berlinerin. Speaks clearly and uses polite 'Sie'.",
+    "initialLine": "Kann ich Ihnen helfen?",
+    "initialTranslation": "Can I help you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Sie sind Tourist in Berlin. Sie stehen am Alexanderplatz und suchen den Weg zum Brandenburger Tor. Fragen Sie höflich nach dem Weg.",
+  "debriefEn": "You are a tourist in Berlin. You are at Alexanderplatz and looking for the way to Brandenburg Gate. Ask politely for directions.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Excuse yourself and ask how to get to Brandenburg Gate.",
+      "prompt": {
+        "ru": "Entschuldigung, wie komme ich zum Brandenburger Tor?",
+        "phonetic": "Ent-SHOOL-dee-goong, vee KOM-muh ikh tsoom BRAHN-den-boor-ger Tor?",
+        "en": "Excuse me, how do I get to Brandenburg Gate?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask which subway line to take.",
+      "prompt": {
+        "ru": "Welche Linie muss ich nehmen?",
+        "phonetic": "VEL-khe LEE-nee moos ikh NAY-men?",
+        "en": "Which line must I take?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask how many stops it is.",
+      "prompt": {
+        "ru": "Wie viele Stationen sind es?",
+        "phonetic": "Vee FEE-le shta-TSYOH-nen zint es?",
+        "en": "How many stations is it?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Thank them and confirm the directions in your own words.",
+      "prompt": {
+        "ru": "Danke! Dann nehme ich also die U-Bahn Linie 2 Richtung Brandenburger Tor — ist das richtig?",
+        "phonetic": "DAN-keh! Dan NAY-meh ikh AL-zo dee OO-bahn LEE-nee tsvy RIKH-toong BRAHN-den-boor-ger Tor — ist das RIKH-tikh?",
+        "en": "Thanks! So I take U-Bahn line 2 toward Brandenburg Gate — is that right?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank warmly and say you're new in Berlin.",
+      "prompt": {
+        "ru": "Vielen Dank! Ich bin neu in Berlin.",
+        "phonetic": "FEE-len Dank! Ikh bin noy in ber-LEEN.",
+        "en": "Many thanks! I'm new in Berlin."
+      }
+    }
+  ]
+}

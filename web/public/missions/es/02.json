@@ -1,0 +1,82 @@
+{
+  "id": "plaza",
+  "title": "San Telmo Market",
+  "language": "es",
+  "setting": "San Telmo Market, Buenos Aires. Evening. Tango bands play as you meet a friend at a street-side parrilla.",
+  "npc": {
+    "name": "Diego",
+    "personality": "friendly, enthusiastic local friend. Uses casual Rioplatense slang. Warm and welcoming.",
+    "initialLine": "¡Che, boludo! Acá estoy. ¿Te costó mucho llegar con el subte a esta hora?",
+    "initialTranslation": "Hey, dude! Here I am. Was it hard to get here by subway at this hour?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Eres un turista en Buenos Aires. Quedaste con tu amigo Diego en el San Telmo Market. Van a cenar empanadas y escuchar tango. Usa el español informal con tu amigo.",
+  "debriefEn": "You are a tourist in Buenos Aires. You met up with your friend Diego at San Telmo Market. You're going to eat empanadas and listen to tango. Use informal Spanish with your friend.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet Diego and answer his question about the subway ride. Say the B line was packed but you made it.",
+      "prompt": {
+        "ru": "¡Diego! La línea B venía re llena, pero llegué. Qué bueno verte, che.",
+        "phonetic": "DYES-go! La LEE-neh-a B ven-EE-a reh YEH-na, pe-ro ye-GHEH. Ke BWEH-no VER-te, cheh.",
+        "en": "Diego! The B line was really packed, but I made it. So good to see you, mate."
+      },
+      "npcReply": {
+        "ru": "¡Qué loco! A esta hora el subte es una lata. Vamos a sentarnos acá cerca de la parrilla.",
+        "en": "How crazy! At this hour the subway is a pain. Let's sit here near the grill."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Diego asks how your trip has been so far. Tell him it's been great, but you got lost near Retiro yesterday.",
+      "prompt": {
+        "ru": "Bárbaro, la verdad. Aunque ayer me perdí cerca de Retiro, boludo.",
+        "phonetic": "BAR-ba-ro, la ver-DAD. Ow-na-kee AH-yer me per-DEE ser-ka de re-TEE-ro, bo-LOO-do.",
+        "en": "Great, honestly. Although I got lost near Retiro yesterday, dude."
+      },
+      "npcReply": {
+        "ru": "Jaja, claro, el centro te marea al principio. Pero ya te vas a acostumbrar, che.",
+        "en": "Haha, of course, downtown overwhelms you at first. But you'll get used to it, mate."
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Diego says hunger is the best sauce. Say you're starving and suggest ordering a dozen empanadas to share.",
+      "prompt": {
+        "ru": "Me muero de hambre. ¿Pedimos una docena de empanadas para compartir?",
+        "phonetic": "Meh MWER-o de AM-bre. Pe-DEE-mos OO-na do-SEH-na de em-pa-NA-das PA-ra kom-par-TEER?",
+        "en": "I'm starving. Should we order a dozen empanadas to share?"
+      },
+      "npcReply": {
+        "ru": "¡Dale! Acá las hacen bien jugosas. Pedimos seis de carne y seis de jamón y queso.",
+        "en": "Sure! They make them really juicy here. Let's order six beef and six ham and cheese."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Diego says his parents are fine and asks about your family. Say your folks are well and ask if his are still dancing tango.",
+      "prompt": {
+        "ru": "Mi familia está bien, gracias. ¿Tus viejos siguen bailando tango los domingos?",
+        "phonetic": "Mee fa-MEE-lya es-TA byehn, GRA-syas. Toos VYEH-hos SEE-gwen ba-ee-LAN-do TAN-go los do-MEEN-gos?",
+        "en": "My family is well, thanks. Do your parents still dance tango on Sundays?"
+      },
+      "npcReply": {
+        "ru": "Sí, che, los domingos van a la milonga en el barrio. Son unos cracks.",
+        "en": "Yes, mate, on Sundays they go to the milonga in the neighborhood. They're great."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "It's getting late and you need to catch the colectivo. Thank Diego, insist on paying, and promise to meet again soon.",
+      "prompt": {
+        "ru": "Me tengo que ir, che, o pierdo el bondi. Gracias por todo. Esta ronda va por mi cuenta. Nos vemos pronto.",
+        "phonetic": "Meh TEN-go ke eer, cheh, o PYER-do el BON-dee. GRA-syas por TO-do. ES-ta RON-da va por mee KWEN-ta. Nos VEH-mos PRON-to.",
+        "en": "I have to go, mate, or I'll miss the bus. Thanks for everything. This round is on me. See you soon."
+      },
+      "npcReply": {
+        "ru": "¡Dale, che! Gracias por invitar. Te escribo mañana para vernos el finde.",
+        "en": "Sure, mate! Thanks for treating. I'll text you tomorrow so we can meet on the weekend."
+      }
+    }
+  ]
+}

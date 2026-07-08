@@ -1,0 +1,61 @@
+{
+  "id": "grocery-market",
+  "title": "Продуктовый рынок",
+  "setting": "Danilovsky market, Moscow. Saturday noon. You are hosting a dinner party tonight and need to buy ingredients. A friendly vendor helps you pick everything.",
+  "npc": {
+    "name": "Vendor Mariya",
+    "personality": "warm, talkative, uses expressive Russian. Enjoys chatting with customers. May offer cooking advice. Speaks naturally with reduced speech.",
+    "initialLine": "Здравствуйте! Что желаете?",
+    "initialTranslation": "Hello! What would you like?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Это ваше третье задание. Вы готовите ужин для друзей. Вы на рынке. Вам нужно купить продукты: мясо, овощи, специи. Говорите с продавцом: спрашивайте цены, просите советы. Используйте слова «нужно», «сколько», «мне», «у вас есть».",
+  "debriefEn": "This is your third mission. You are cooking dinner for friends. You are at the market. You need to buy groceries: meat, vegetables, spices. Talk to the vendor: ask about prices, ask for advice. Use the words 'I need', 'how much', 'I have', 'do you have'.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the vendor and explain you need to buy groceries for dinner tonight — friends are coming over.",
+      "prompt": {
+        "ru": "Здравствуйте! Мне нужно купить продукты для ужина. Сегодня ко мне придут друзья.",
+        "phonetic": "Zdra-VSTVOI-tye! MNYE NUZH-na ku-PIT' PRO-dook-ty dlya U-zhi-na. Se-VOD-nya ko mnye pri-DOOT droo-ZYA.",
+        "en": "Hello! I need to buy groceries for dinner. Friends are coming over to my place today."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Say you want to cook borscht and salad — ask if they have fresh vegetables.",
+      "prompt": {
+        "ru": "Я хочу приготовить борщ и салат. У вас есть свежие овощи?",
+        "phonetic": "Ya kha-CHOO pri-go-TO-vit' BORSH i sa-LAT. Oo VAS YES-tya SVE-zhi-ye O-va-shee?",
+        "en": "I want to cook borscht and salad. Do you have fresh vegetables?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask for half a kilo of beef, three beets, and five potatoes — then ask how much it costs.",
+      "prompt": {
+        "ru": "Мне нужно полкило говядины, три свёклы и пять картофелин. Сколько это стоит?",
+        "phonetic": "MNYE NUZH-na pol-ki-LO ga-VYA-di-ny, tree SVYOK-ly i pyat' kar-TO-fe-lin. SKOL-ka EH-ta STO-eet?",
+        "en": "I need half a kilo of beef, three beets, and five potatoes. How much does this cost?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Mention your friends like spicy food — ask if they have garlic and pepper.",
+      "prompt": {
+        "ru": "Моим друзьям нравится острая еда. Есть у вас чеснок и перец?",
+        "phonetic": "Mo-IM droo-ZYAM NRA-vee-tsa OS-tra-ya ye-DA. YEST' oo VAS ches-NOK i PE-rets?",
+        "en": "My friends like spicy food. Do you have garlic and pepper?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank the vendor and say you'll come back next week if the food turns out well.",
+      "prompt": {
+        "ru": "Спасибо! Вы мне очень помогли. Если всё будет вкусно, я вернусь на следующей неделе.",
+        "phonetic": "Spa-SEE-ba! Vy mnye O-chen po-mag-LEE. YES-li VSYO BOO-det VKOOS-na, ya ver-NOOS' na SLE-doo-yoo-shey ne-DYE-lye.",
+        "en": "Thank you! You helped me a lot. If everything turns out tasty, I'll come back next week."
+      }
+    }
+  ]
+}

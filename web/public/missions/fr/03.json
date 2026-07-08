@@ -1,0 +1,62 @@
+{
+  "id": "boulangerie",
+  "title": "Boulangerie de la Rue",
+  "language": "fr",
+  "setting": "A traditional boulangerie in Montmartre. Saturday morning. You need to buy bread and pastries for a dinner party.",
+  "npc": {
+    "name": "Madame Dubois",
+    "personality": "expert baker, proud of her craft, warm but exacting. Loves recommending her specialties.",
+    "initialLine": "Bonjour madame/monsieur ! Qu'est-ce qu'il vous faut aujourd'hui ?",
+    "initialTranslation": "Hello madam/sir! What do you need today?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Vous organisez un dîner chez vous ce soir. Vous allez à la boulangerie pour acheter du pain et des pâtisseries. Parlez poliment et demandez des recommandations.",
+  "debriefEn": "You're hosting a dinner party tonight. You go to the bakery to buy bread and pastries. Speak politely and ask for recommendations.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the baker and say you need bread for six people — you're having guests.",
+      "prompt": {
+        "ru": "Bonjour ! Je reçois des amis ce soir. J'aurais besoin de pain pour six personnes.",
+        "phonetic": "Bohn-joor! Zhuh ruh-swah day-zah-mee suh swahr. Zhoh-reh buh-zwan duh pan poor see pehr-son.",
+        "en": "Hello! I'm having friends over tonight. I'd need bread for six people."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask what bread they recommend to go with cheese.",
+      "prompt": {
+        "ru": "Quel pain me recommandez-vous pour accompagner du fromage ?",
+        "phonetic": "Kell pan muh ruh-kom-mahn-day-voo poor ah-kom-pahn-yay dew fro-mahj?",
+        "en": "What bread do you recommend to go with cheese?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Say you'll take a baguette tradition and a country loaf.",
+      "prompt": {
+        "ru": "Je vais prendre une tradition et un pain de campagne.",
+        "phonetic": "Zhuh vay prahn-dr oon tra-dee-syon ay uh pan duh kahm-pahn-yuh.",
+        "en": "I'll take a baguette tradition and a country loaf."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask if they have sweet pastries for dessert — what's their specialty?",
+      "prompt": {
+        "ru": "Avez-vous des pâtisseries ? Quelle est votre spécialité ?",
+        "phonetic": "Ah-vay-voo day pa-tees-ree? Kell ay vo-truh spay-sya-lee-tay?",
+        "en": "Do you have pastries? What is your specialty?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Decide what to take, ask for the total, and thank them.",
+      "prompt": {
+        "ru": "Parfait. Combien je vous dois ? Merci beaucoup !",
+        "phonetic": "Par-feh. Kom-byen zhuh voo dwah? Mehr-see bo-koo!",
+        "en": "Perfect. How much do I owe you? Thank you very much!"
+      }
+    }
+  ]
+}

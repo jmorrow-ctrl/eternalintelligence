@@ -1,0 +1,32 @@
+{
+  "name": "covert-ops-ru",
+  "version": "1.0.0",
+  "description": "Russian language spy game CLI with speech integration",
+  "private": true,
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "beginner": "tsx src/main.ts --difficulty=beginner",
+    "intermediate": "tsx src/main.ts --difficulty=intermediate",
+    "advanced": "tsx src/main.ts --difficulty=advanced",
+    "dev:beginner": "tsx src/main.ts --difficulty=beginner --no-speech",
+    "dev:intermediate": "tsx src/main.ts --difficulty=intermediate --no-speech",
+    "dev:advanced": "tsx src/main.ts --difficulty=advanced --no-speech",
+    "mission": "tsx src/main.ts --mission missions/01-moscow-metro.json",
+    "text-mode": "tsx src/main.ts --no-speech",
+    "serve": "bin/gigastt serve --pool-size 1",
+    "speech": "bin/gigastt serve --pool-size 1 & sleep 3 && tsx src/main.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.0",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.7",
+    "microsoft-cognitiveservices-speech-sdk": "^1.41.0",
+    "node-record-lpcm16": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

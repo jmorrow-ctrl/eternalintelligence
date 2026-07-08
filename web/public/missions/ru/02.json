@@ -1,0 +1,62 @@
+{
+  "id": "university-visit",
+  "title": "МГУ — Ломоносовский корпус",
+  "language": "ru",
+  "setting": "Moscow State University, main building. 10:15. You are a foreign student looking for the Department of Linguistics. Ask a professor for help.",
+  "npc": {
+    "name": "Professor Aleksandr",
+    "personality": "formal, precise, patient with foreigners. Appreciates correct grammar and polite address. Responds in full sentences.",
+    "initialLine": "Добрый день. Вы к кому?",
+    "initialTranslation": "Good afternoon. Who are you looking for?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Это ваше второе задание. Вы студент из другой страны. Вы в Московском университете. Вам нужно найти факультет лингвистики. Расскажите профессору о себе: откуда вы, ваша семья, что вы изучаете. Используйте предложения с «я», «мой», «моя».",
+  "debriefEn": "This is your second mission. You are a student from another country. You are at Moscow University. You need to find the Linguistics department. Tell the professor about yourself: where you're from, your family, what you study. Use sentences with 'I', 'my'.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the professor and explain you're a new student looking for the Linguistics department.",
+      "prompt": {
+        "ru": "Здравствуйте! Я новый студент. Подскажите, пожалуйста, где находится факультет лингвистики.",
+        "phonetic": "Zdra-VSTVOI-tye! Ya NO-vy stoo-DYENT. Pad-skah-ZHI-tye, pah-ZHAL-sta, gdye NA-ho-deet-sya fa-kool-TYET ling-VIS-ti-ki.",
+        "en": "Hello! I'm a new student. Could you please tell me where the Linguistics department is?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Tell the professor you're from Canada and came to Moscow to study Russian.",
+      "prompt": {
+        "ru": "Я из Канады. Я приехал учить русский язык в Москве.",
+        "phonetic": "Ya iz Ka-NA-dy. Ya pri-YE-khal oo-CHIT' ROO-skee ya-ZYK v Mask-VYE.",
+        "en": "I'm from Canada. I came to study Russian in Moscow."
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Mention that your family — mom, dad, and younger sister — stayed back home.",
+      "prompt": {
+        "ru": "Моя семья — мама, папа и младшая сестра — осталась дома.",
+        "phonetic": "Ma-YA sem-YA — MA-ma, PA-pa i MLAD-sha-yi sis-TRA — os-TA-las' DO-ma.",
+        "en": "My family — mom, dad, and younger sister — stayed home."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Tell them you want to study Russian literature and history.",
+      "prompt": {
+        "ru": "Я хочу изучать русскую литературу и историю.",
+        "phonetic": "Ya kha-CHOO iz-u-CHAT' ROO-skoo-yu li-te-ra-TOO-roo i is-TO-ree-yu.",
+        "en": "I want to study Russian literature and history."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank the professor and say goodbye.",
+      "prompt": {
+        "ru": "Большое спасибо за помощь! Вы очень добры. До свидания!",
+        "phonetic": "Bal-SHO-ye spa-SEE-ba za PO-mashch! Vy O-chen dob-RY! Da svi-DA-ni-ya!",
+        "en": "Thank you very much for your help! You're very kind. Goodbye!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "bus-terminal",
+  "title": "BSÍ Bus Terminal",
+  "language": "is",
+  "setting": "The main bus terminal in Reykjavík. 08:45. You need to ask about bus routes to the Golden Circle.",
+  "npc": {
+    "name": "Anna",
+    "personality": "friendly bus station attendant, patient with tourists. Speaks clearly.",
+    "initialLine": "Góðan daginn. Get ég hjálpað þér?",
+    "initialTranslation": "Good day. Can I help you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Þú ert ferðamaður á Íslandi. Þú ert í BSÍ og þarft að komast á Gullna hringinn. Notaðu einfaldar setningar eins og 'Afsakið' og 'Takk'.",
+  "debriefEn": "You are a tourist in Iceland. You are at the BSÍ bus terminal and need to get to the Golden Circle. Use simple phrases like 'Excuse me' and 'Thank you'.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Excuse yourself and ask about the next bus to the Golden Circle.",
+      "prompt": {
+        "ru": "Afsakið, hvenær er næsta rúta á Gullna hringinn?",
+        "phonetic": "AV-sa-kith, KVEH-nigh-er er NIGH-sta ROO-ta ow GWOTL-na HRING-kitn?",
+        "en": "Excuse me, when is the next bus to the Golden Circle?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask how long the trip takes.",
+      "prompt": {
+        "ru": "Hversu langan tíma tekur ferðin?",
+        "phonetic": "KVER-soo LANG-an TEE-ma TEH-kur FER-then?",
+        "en": "How long does the trip take?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask how much a ticket costs.",
+      "prompt": {
+        "ru": "Hvað kostar miði?",
+        "phonetic": "Kvath KOS-tar MIH-the?",
+        "en": "How much does a ticket cost?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Say you want to buy a round-trip ticket.",
+      "prompt": {
+        "ru": "Ég ætla að kaupa miða fram og til baka.",
+        "phonetic": "Yeg AY-tla ath KOY-pa MIH-tha fram ok til BAH-ka.",
+        "en": "I'm going to buy a ticket there and back."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank them and ask what time the bus returns.",
+      "prompt": {
+        "ru": "Takk fyrir! Hvenær kemur rútan til baka?",
+        "phonetic": "Tahk FIR-ir! KVEH-nigh-er KEH-mur ROO-tan til BAH-ka?",
+        "en": "Thank you! When does the bus come back?"
+      }
+    }
+  ]
+}

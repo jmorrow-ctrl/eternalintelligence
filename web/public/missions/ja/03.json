@@ -1,0 +1,165 @@
+{
+  "id": "conbini",
+  "title": "コンビニ",
+  "language": "ja",
+  "setting": "A convenience store in Shibuya, Tokyo. Late night. You need to buy several items and chat with the friendly clerk.",
+  "npc": {
+    "name": "店員 佐藤",
+    "personality": "friendly convenience store clerk, uses polite Japanese. Cheerful even late at night.",
+    "initialLine": "いらっしゃいませ！",
+    "initialTranslation": "Welcome!"
+  },
+  "difficulty": "any",
+  "debriefRu": "あなたは渋谷のコンビニにいます。夜食を買いましょう。店員と話しながら買い物をしてください。",
+  "debriefEn": "You're at a convenience store in Shibuya. Buy some late-night snacks and chat with the clerk.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Ask if they have onigiri (rice balls).",
+      "prompt": {
+        "ru": "Sumimasen, onigiri wa arimasu ka?",
+        "phonetic": "Soo-mee-mah-sen, oh-nee-gee-ree wah ah-ree-mahs-kah?",
+        "en": "Excuse me, do you have onigiri?",
+        "native_script": "すみません、おにぎりはありますか？",
+        "tokens": [
+          {
+            "text": "すみません",
+            "reading": "すみません"
+          },
+          {
+            "text": "、",
+            "reading": ""
+          },
+          {
+            "text": "おにぎり",
+            "reading": "おにぎり"
+          },
+          {
+            "text": "はありますか？",
+            "reading": "はありますか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask what flavors of onigiri they have.",
+      "prompt": {
+        "ru": "Onigiri no shurui wa nan ga arimasu ka?",
+        "phonetic": "Oh-nee-gee-ree no shoo-roo-ee wah nan gah ah-ree-mahs-kah?",
+        "en": "What kinds of onigiri do you have?",
+        "native_script": "おにぎりの種類は何がありますか？",
+        "tokens": [
+          {
+            "text": "おにぎり",
+            "reading": "おにぎり"
+          },
+          {
+            "text": "の",
+            "reading": "の"
+          },
+          {
+            "text": "種類",
+            "reading": "しゅるい"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "何がありますか？",
+            "reading": "なんがありますか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Order two onigiri and ask for chopsticks.",
+      "prompt": {
+        "ru": "Onigiri o futatsu to ohashi o kudasai.",
+        "phonetic": "Oh-nee-gee-ree oh foo-tah-tsu toh oh-hah-shee oh koo-dah-sai.",
+        "en": "Two onigiri and chopsticks, please.",
+        "native_script": "おにぎりを二つとお箸をください。",
+        "tokens": [
+          {
+            "text": "おにぎり",
+            "reading": "おにぎり"
+          },
+          {
+            "text": "を",
+            "reading": "を"
+          },
+          {
+            "text": "二つ",
+            "reading": "ふたつ"
+          },
+          {
+            "text": "と",
+            "reading": "と"
+          },
+          {
+            "text": "お箸",
+            "reading": "おはし"
+          },
+          {
+            "text": "をください。",
+            "reading": "をください。"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask if they accept credit cards.",
+      "prompt": {
+        "ru": "Kurejitto kādo wa tsukaemasu ka?",
+        "phonetic": "Koo-reh-jeet-toh kah-doh wah tsoo-kah-eh-mahs-kah?",
+        "en": "Can I use a credit card?",
+        "native_script": "クレジットカードは使えますか？",
+        "tokens": [
+          {
+            "text": "クレジットカード",
+            "reading": "クレジットカード"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "使えますか？",
+            "reading": "つかえますか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank the clerk and say goodnight.",
+      "prompt": {
+        "ru": "Arigatō gozaimashita. Oyasuminasai!",
+        "phonetic": "Ah-ree-gah-toh goh-zai-mahsh-tah. Oh-yah-soo-mee-nah-sai!",
+        "en": "Thank you very much. Goodnight!",
+        "native_script": "ありがとうございました。おやすみなさい！",
+        "tokens": [
+          {
+            "text": "ありがとうございました",
+            "reading": "ありがとうございました"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "おやすみなさい",
+            "reading": "おやすみなさい"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          }
+        ]
+      }
+    }
+  ]
+}

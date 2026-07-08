@@ -1,0 +1,193 @@
+{
+  "id": "station",
+  "title": "東京駅",
+  "language": "ja",
+  "setting": "Tokyo Station. 09:00. You are a tourist trying to find the right platform for the Shinkansen to Kyoto.",
+  "npc": {
+    "name": "駅員 田中",
+    "personality": "polite and efficient station staff. Uses formal keigo. Very helpful to travelers.",
+    "initialLine": "いらっしゃいませ。どうされましたか？",
+    "initialTranslation": "Welcome. How can I help you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "あなたは東京駅にいます。京都行きの新幹線に乗りたいです。駅員にプラットホームを聞いてください。",
+  "debriefEn": "You are at Tokyo Station. You want to take the Shinkansen to Kyoto. Ask the station staff which platform.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Excuse yourself and ask which platform the Shinkansen to Kyoto departs from.",
+      "prompt": {
+        "ru": "Sumimasen, Kyōto-iki no Shinkansen wa nanban-sen desu ka?",
+        "phonetic": "Soo-mee-mah-sen, Kyoh-toh-ee-kee no Shinkansen wa nan-ban-sen des-ka?",
+        "en": "Excuse me, which platform is the Shinkansen to Kyoto?",
+        "native_script": "すみません、京都行きの新幹線は何番線ですか？",
+        "tokens": [
+          {
+            "text": "すみません",
+            "reading": "すみません"
+          },
+          {
+            "text": "、",
+            "reading": ""
+          },
+          {
+            "text": "京都",
+            "reading": "きょうと"
+          },
+          {
+            "text": "行き",
+            "reading": "いき"
+          },
+          {
+            "text": "の",
+            "reading": "の"
+          },
+          {
+            "text": "新幹線",
+            "reading": "しんかんせん"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "何番線",
+            "reading": "なんばんせん"
+          },
+          {
+            "text": "ですか？",
+            "reading": "ですか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Check that this is the correct platform for the Kyoto Shinkansen.",
+      "prompt": {
+        "ru": "Kono hōmu de Kyōto-iki no Shinkansen desu ka?",
+        "phonetic": "Koh-noh hoh-moo deh Kyoh-toh-ee-kee no Shinkansen des-kah?",
+        "en": "Is this the platform for the Shinkansen to Kyoto?",
+        "native_script": "このホームで京都行きの新幹線ですか？",
+        "tokens": [
+          {
+            "text": "この",
+            "reading": "この"
+          },
+          {
+            "text": "ホーム",
+            "reading": "ホーム"
+          },
+          {
+            "text": "で",
+            "reading": "で"
+          },
+          {
+            "text": "京都",
+            "reading": "きょうと"
+          },
+          {
+            "text": "行き",
+            "reading": "いき"
+          },
+          {
+            "text": "の",
+            "reading": "の"
+          },
+          {
+            "text": "新幹線",
+            "reading": "しんかんせん"
+          },
+          {
+            "text": "ですか？",
+            "reading": "ですか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask how long the trip takes to Kyoto.",
+      "prompt": {
+        "ru": "Kyōto made dono kurai kakarimasu ka?",
+        "phonetic": "Kyoh-toh mah-deh doh-noh koo-rai kah-kah-ree-mahs-kah?",
+        "en": "How long does it take to Kyoto?",
+        "native_script": "京都までどのくらいかかりますか？",
+        "tokens": [
+          {
+            "text": "京都",
+            "reading": "きょうと"
+          },
+          {
+            "text": "まで",
+            "reading": "まで"
+          },
+          {
+            "text": "どのくらい",
+            "reading": "どのくらい"
+          },
+          {
+            "text": "かかりますか？",
+            "reading": "かかりますか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Thank them and ask where the ticket gate is.",
+      "prompt": {
+        "ru": "Arigatō gozaimasu. Kaisatsu-guchi wa doko desu ka?",
+        "phonetic": "Ah-ree-gah-toh goh-zai-mahs. Kai-sah-tsu-goo-chee wah doh-koh des-kah?",
+        "en": "Thank you. Where is the ticket gate?",
+        "native_script": "ありがとうございます。改札口はどこですか？",
+        "tokens": [
+          {
+            "text": "ありがとうございます",
+            "reading": "ありがとうございます"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "改札口",
+            "reading": "かいさつぐち"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "どこですか？",
+            "reading": "どこですか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Bow and thank them again very politely.",
+      "prompt": {
+        "ru": "Hontō ni arigatō gozaimashita!",
+        "phonetic": "Hohn-toh nee ah-ree-gah-toh goh-zai-mahsh-tah!",
+        "en": "Thank you so very much!",
+        "native_script": "本当にありがとうございました！",
+        "tokens": [
+          {
+            "text": "本当に",
+            "reading": "ほんとうに"
+          },
+          {
+            "text": "ありがとうございました",
+            "reading": "ありがとうございました"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          }
+        ]
+      }
+    }
+  ]
+}

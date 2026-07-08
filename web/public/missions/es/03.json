@@ -1,0 +1,82 @@
+{
+  "id": "office",
+  "title": "Oficina de Inmigraciones",
+  "language": "es",
+  "setting": "A government office in Buenos Aires. 2:30 PM. You need to resolve a paperwork issue and negotiate with a helpful but firm clerk.",
+  "npc": {
+    "name": "Licenciada Rojas",
+    "personality": "formal, precise, by-the-book government clerk. Helpful but expects proper procedure. Uses formal 'usted'.",
+    "initialLine": "Buenas tardes. Le toca el turno 42. ¿Me dice en qué puedo ayudarla?",
+    "initialTranslation": "Good afternoon. Your number is 42. Please tell me how I can help you."
+  },
+  "difficulty": "any",
+  "debriefRu": "Eres un extranjero viviendo en Buenos Aires. Necesitas renovar tu permiso de residencia. Debes hablar formalmente con la funcionaria y negociar una solución.",
+  "debriefEn": "You are a foreigner living in Buenos Aires. You need to renew your residence permit. You must speak formally with the clerk and negotiate a solution.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Respond to the clerk's greeting. Explain politely that you need to renew your residence permit and are unsure about the procedure.",
+      "prompt": {
+        "ru": "Buenas tardes, licenciada. Vengo a renovar mi permiso de residencia, pero no estoy seguro del trámite.",
+        "phonetic": "BWEH-nas TAR-des, lee-sen-sya-DA. VEN-go a re-no-VAR mee per-MEE-so de re-see-DEN-sya, PE-ro no es-TOY se-GOO-ro del TRA-mee-teh.",
+        "en": "Good afternoon, ma'am. I've come to renew my residence permit, but I'm not sure about the procedure."
+      },
+      "npcReply": {
+        "ru": "Muy bien. Necesito ver el permiso anterior y una copia de su pasaporte, por favor.",
+        "en": "Very well. I need to see your previous permit and a copy of your passport, please."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "She asks for your old permit. Apologize — you only brought a photocopy — and ask what other documents are needed.",
+      "prompt": {
+        "ru": "Discúlpeme, solo traje una fotocopia del permiso. ¿Qué otros documentos necesito presentar?",
+        "phonetic": "Dees-KOOL-peh-meh, SO-lo tra-HEH OO-na fo-to-ko-PEE-a del per-MEE-so. Ke O-tros do-koo-MEN-tos ne-se-SEE-to pre-sen-TAR?",
+        "en": "Excuse me, I only brought a photocopy of the permit. What other documents do I need to submit?"
+      },
+      "npcReply": {
+        "ru": "Necesitamos el original, comprobante de domicilio actualizado y la foto carnet.",
+        "en": "We need the original, a current proof of address, and an ID photo."
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "She lists several documents you don't have. Ask respectfully if there is any other way to move the renewal forward today.",
+      "prompt": {
+        "ru": "Entiendo. ¿Hay alguna forma de avanzar con la renovación hoy mismo?",
+        "phonetic": "En-TYEN-do. I al-GOO-na FOR-ma de a-van-SAR kon la re-no-va-SYON oy MEEZ-mo?",
+        "en": "I understand. Is there any way to move the renewal forward today?"
+      },
+      "npcReply": {
+        "ru": "Bueno, podemos hacer una prórroga temporal mientras usted junta el resto de la documentación.",
+        "en": "Well, we can do a temporary extension while you gather the rest of the documentation."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "She says maybe a temporary extension is possible. Ask her to process one while you gather the missing papers.",
+      "prompt": {
+        "ru": "¿Podría gestionarme una prórroga temporal mientras junto los papeles que faltan?",
+        "phonetic": "Po-DREE-a hes-tee-o-NAR-meh OO-na PRO-ro-ga tem-po-RAL myen-tras HOON-to los pa-PE-les ke FAL-tan?",
+        "en": "Could you process a temporary extension for me while I gather the missing papers?"
+      },
+      "npcReply": {
+        "ru": "Sí, señor. Le preparo la prórroga. Tiene que volver dentro de diez días hábiles con el original.",
+        "en": "Yes, sir. I'll prepare the extension. You must return within ten business days with the original."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "She agrees and gives you an appointment. Thank her for her patience and ask when exactly you should return.",
+      "prompt": {
+        "ru": "Muchas gracias por su paciencia. ¿A qué hora y en qué día debo regresar?",
+        "phonetic": "MOO-chas GRA-syas por soo pa-syEN-sya. A ke O-ra ee en ke DEE-a DE-bo re-gre-SAR?",
+        "en": "Thank you very much for your patience. At what time and on what day should I return?"
+      },
+      "npcReply": {
+        "ru": "Pase el lunes 14 a las nueve de la mañana, por favor. Que tenga buen día.",
+        "en": "Come in Monday the 14th at nine in the morning, please. Have a good day."
+      }
+    }
+  ]
+}

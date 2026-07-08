@@ -1,0 +1,62 @@
+{
+  "id": "metro",
+  "title": "Métro Bastille",
+  "language": "fr",
+  "setting": "Bastille metro station, Paris. Rush hour. You ask a local for directions to the Musée d'Orsay.",
+  "npc": {
+    "name": "Monsieur Lefevre",
+    "personality": "brisk Parisian commuter, helpful but in a hurry. Speaks quickly.",
+    "initialLine": "Oui ? Vous cherchez quelque chose ?",
+    "initialTranslation": "Yes? Are you looking for something?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Vous êtes touriste à Paris. Vous êtes dans le métro et vous cherchez le Musée d'Orsay. Demandez votre chemin en français.",
+  "debriefEn": "You are a tourist in Paris. You are in the metro and looking for the Musée d'Orsay. Ask for directions in French.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Excuse yourself and ask for directions to the Musée d'Orsay.",
+      "prompt": {
+        "ru": "Excusez-moi, pourriez-vous m'indiquer le Musée d'Orsay ?",
+        "phonetic": "Ek-skew-zay-mwah, poo-ree-ay voo man-dee-kay luh mew-zay dor-say?",
+        "en": "Excuse me, could you tell me the way to the Musée d'Orsay?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask which metro line to take.",
+      "prompt": {
+        "ru": "Quelle ligne de métro dois-je prendre ?",
+        "phonetic": "Kell leen-yuh duh may-tro dwah-juh prahn-dr?",
+        "en": "Which metro line should I take?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask if it's far and how many stops.",
+      "prompt": {
+        "ru": "C'est loin ? Combien de stations ?",
+        "phonetic": "Say lwan? Kom-byen duh sta-syon?",
+        "en": "Is it far? How many stops?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Thank them and confirm the directions in your own words.",
+      "prompt": {
+        "ru": "Merci. Alors je dois prendre la ligne huit jusqu'à Concorde, c'est bien ça ?",
+        "phonetic": "Mehr-see. Ah-lohr zhuh dwah prahn-dr la leen-yuh weet zhoos-kah Kon-kord, say byan sa?",
+        "en": "Thanks. So I should take line 8 to Concorde, is that right?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank again and say you're new to Paris.",
+      "prompt": {
+        "ru": "Merci beaucoup ! Je suis nouveau à Paris.",
+        "phonetic": "Mehr-see bo-koo! Zhuh swee noo-vo ah Pa-ree.",
+        "en": "Thank you very much! I'm new to Paris."
+      }
+    }
+  ]
+}

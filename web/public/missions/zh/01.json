@@ -1,0 +1,217 @@
+{
+  "id": "hutong",
+  "title": "北京胡同",
+  "language": "zh",
+  "setting": "A narrow hutong alley in Beijing. 10:00. You are lost and need to ask a friendly local for directions to the nearest subway station.",
+  "npc": {
+    "name": "老王 (Lǎo Wáng)",
+    "personality": "friendly retired local, patient with outsiders. Uses simple Mandarin and speaks clearly.",
+    "initialLine": "你好，有什么事吗？",
+    "initialTranslation": "Hello, what's the matter?"
+  },
+  "difficulty": "any",
+  "debriefRu": "你在北京的一个胡同里迷路了。你需要问路去最近的地铁站。用中文礼貌地询问。",
+  "debriefEn": "You are lost in a hutong in Beijing. You need to ask for directions to the nearest subway station. Ask politely in Chinese.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet a local and ask where the nearest subway station is.",
+      "prompt": {
+        "ru": "Qǐngwèn, zuìjìn de dìtiě zhàn zài nǎlǐ?",
+        "phonetic": "Cheeng-wun, dzway-jin deh dee-tyeh jan dzai nah-lee?",
+        "en": "Excuse me, where is the nearest subway station?",
+        "native_script": "请问，最近的地铁站在哪里？",
+        "tokens": [
+          {
+            "text": "请问",
+            "reading": "qǐngwèn"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "最近",
+            "reading": "zuìjìn"
+          },
+          {
+            "text": "的",
+            "reading": "de"
+          },
+          {
+            "text": "地铁站",
+            "reading": "dìtiě zhàn"
+          },
+          {
+            "text": "在",
+            "reading": "zài"
+          },
+          {
+            "text": "哪里",
+            "reading": "nǎlǐ"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask if it's far and how to walk there.",
+      "prompt": {
+        "ru": "Yuǎn bù yuǎn? Zěnme zǒu guòqù?",
+        "phonetic": "Ywen boo ywen? Dzun-muh dzoh gwoh-chyoo?",
+        "en": "Is it far or not? How do I walk there?",
+        "native_script": "远不远？怎么走过去？",
+        "tokens": [
+          {
+            "text": "远不远",
+            "reading": "yuǎn bù yuǎn"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          },
+          {
+            "text": "怎么",
+            "reading": "zěnme"
+          },
+          {
+            "text": "走",
+            "reading": "zǒu"
+          },
+          {
+            "text": "过去",
+            "reading": "guòqù"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask if there's a bus that goes there.",
+      "prompt": {
+        "ru": "Yǒu méiyǒu gōngjiāochē kěyǐ qù?",
+        "phonetic": "Yoh may-yoh gong-jyaw-chur kuh-yee chyoo?",
+        "en": "Is there a bus that can go there?",
+        "native_script": "有没有公交车可以去？",
+        "tokens": [
+          {
+            "text": "有没有",
+            "reading": "yǒu méiyǒu"
+          },
+          {
+            "text": "公交车",
+            "reading": "gōngjiāochē"
+          },
+          {
+            "text": "可以",
+            "reading": "kěyǐ"
+          },
+          {
+            "text": "去",
+            "reading": "qù"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "They said: walk straight, then turn left. Thank them and repeat it back to confirm.",
+      "prompt": {
+        "ru": "Xièxiè. Nín shuō de shì yīzhí zǒu, ránhòu zuǒ zhuǎn, duì ma?",
+        "phonetic": "Syeh-syeh. Neen shwor duh shir ee-jur dzoh, ran-hoh dzwoh jwahn, dway mah?",
+        "en": "Thanks. You said to walk straight, then turn left, right?",
+        "native_script": "谢谢。您说的是一直走，然后左转，对吗？",
+        "tokens": [
+          {
+            "text": "谢谢",
+            "reading": "xièxiè"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "您说的是",
+            "reading": "nín shuō de shì"
+          },
+          {
+            "text": "一直走",
+            "reading": "yīzhí zǒu"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "然后",
+            "reading": "ránhòu"
+          },
+          {
+            "text": "左转",
+            "reading": "zuǒ zhuǎn"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "对吗",
+            "reading": "duì ma"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank them warmly and say you just arrived in Beijing.",
+      "prompt": {
+        "ru": "Fēicháng gǎnxiè! Wǒ gāng lái Běijīng.",
+        "phonetic": "Fay-chahng gahn-syeh! Woh gahng lie Bay-jeeng.",
+        "en": "Thank you so much! I just came to Beijing.",
+        "native_script": "非常感谢！我刚来北京。",
+        "tokens": [
+          {
+            "text": "非常感谢",
+            "reading": "fēicháng gǎnxiè"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          },
+          {
+            "text": "我",
+            "reading": "wǒ"
+          },
+          {
+            "text": "刚来",
+            "reading": "gāng lái"
+          },
+          {
+            "text": "北京",
+            "reading": "Běijīng"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          }
+        ]
+      }
+    }
+  ]
+}

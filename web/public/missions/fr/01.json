@@ -1,0 +1,62 @@
+{
+  "id": "cafe",
+  "title": "Café du Marché",
+  "language": "fr",
+  "setting": "A cozy café in Le Marais, Paris. 09:00. You order a croissant and coffee while chatting with the friendly barista.",
+  "npc": {
+    "name": "Camille",
+    "personality": "cheerful young barista, patient with customers. Uses friendly 'tu' after initial greeting.",
+    "initialLine": "Bonjour ! Qu'est-ce que je vous sers ?",
+    "initialTranslation": "Hello! What can I serve you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Vous êtes touriste à Paris. Vous entrez dans un café du Marais pour prendre le petit-déjeuner. Commandez en français et soyez poli.",
+  "debriefEn": "You are a tourist in Paris. You enter a café in Le Marais to have breakfast. Order in French and be polite.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet and order a coffee and a croissant.",
+      "prompt": {
+        "ru": "Bonjour ! Je voudrais un café et un croissant, s'il vous plaît.",
+        "phonetic": "Bohn-joor! Zhuh voo-dray uh kah-fay ay uh krwah-sahn, seel voo pleh.",
+        "en": "Hello! I'd like a coffee and a croissant, please."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask how much it costs.",
+      "prompt": {
+        "ru": "Combien ça coûte ?",
+        "phonetic": "Kom-byen sa koot?",
+        "en": "How much does it cost?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask for a glass of water too.",
+      "prompt": {
+        "ru": "Je peux avoir un verre d'eau aussi ?",
+        "phonetic": "Jhuh puh ah-vwahr uh vair doh oh-see?",
+        "en": "Can I have a glass of water too?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Compliment the croissant — say it's delicious.",
+      "prompt": {
+        "ru": "Ce croissant est délicieux !",
+        "phonetic": "Suh krwah-sahn ay day-lee-syuh!",
+        "en": "This croissant is delicious!"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Ask for the bill and wish them a good day.",
+      "prompt": {
+        "ru": "L'addition, s'il vous plaît. Merci et bonne journée !",
+        "phonetic": "La-dee-syon, seel voo pleh. Mehr-see ay bon zhoor-nay!",
+        "en": "The bill, please. Thank you and have a good day!"
+      }
+    }
+  ]
+}

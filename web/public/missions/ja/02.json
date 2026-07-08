@@ -1,0 +1,189 @@
+{
+  "id": "izakaya",
+  "title": "居酒屋 天狗",
+  "language": "ja",
+  "setting": "An izakaya (Japanese pub) in Shinjuku, Tokyo. 19:30. You go out drinking with new colleagues.",
+  "npc": {
+    "name": "山田さん",
+    "personality": "cheerful colleague, uses friendly casual Japanese. A bit tipsy and very talkative.",
+    "initialLine": "お疲れ様です！何を飲みますか？",
+    "initialTranslation": "Thanks for your hard work! What will you drink?"
+  },
+  "difficulty": "any",
+  "debriefRu": "あなたは同僚と新宿の居酒屋に来ています。料理を注文して、会話を楽しんでください。",
+  "debriefEn": "You're at an izakaya in Shinjuku with colleagues. Order food and enjoy the conversation.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Raise your glass and say cheers! Ask what food they recommend.",
+      "prompt": {
+        "ru": "Kanpai! O-susume no tabemono o oshiete kudasai.",
+        "phonetic": "Kan-pie! Oh-soo-soo-meh no tah-beh-moh-noh oh oh-shee-eh-teh koo-dah-sai.",
+        "en": "Cheers! Please tell me what food you recommend.",
+        "native_script": "乾杯！おすすめの食べ物を教えてください。",
+        "tokens": [
+          {
+            "text": "乾杯",
+            "reading": "かんぱい"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          },
+          {
+            "text": "おすすめ",
+            "reading": "おすすめ"
+          },
+          {
+            "text": "の",
+            "reading": "の"
+          },
+          {
+            "text": "食べ物",
+            "reading": "たべもの"
+          },
+          {
+            "text": "を",
+            "reading": "を"
+          },
+          {
+            "text": "教えてください",
+            "reading": "おしえてください"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Order edamame and a beer.",
+      "prompt": {
+        "ru": "Edamame to bīru o kudasai.",
+        "phonetic": "Eh-dah-mah-meh toh bee-roo oh koo-dah-sai.",
+        "en": "Edamame and beer, please.",
+        "native_script": "枝豆とビールをください。",
+        "tokens": [
+          {
+            "text": "枝豆",
+            "reading": "えだまめ"
+          },
+          {
+            "text": "と",
+            "reading": "と"
+          },
+          {
+            "text": "ビール",
+            "reading": "ビール"
+          },
+          {
+            "text": "をください。",
+            "reading": "をください。"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask about the grilled fish — is it fresh today?",
+      "prompt": {
+        "ru": "Kono yakizakana wa kyō no shinsen desu ka?",
+        "phonetic": "Koh-noh yah-kee-zah-kah-nah wah kyoh noh shin-sen des-kah?",
+        "en": "Is this grilled fish fresh today?",
+        "native_script": "この焼き魚は今日の新鮮ですか？",
+        "tokens": [
+          {
+            "text": "この",
+            "reading": "この"
+          },
+          {
+            "text": "焼き魚",
+            "reading": "やきざかな"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "今日",
+            "reading": "きょう"
+          },
+          {
+            "text": "の",
+            "reading": "の"
+          },
+          {
+            "text": "新鮮",
+            "reading": "しんせん"
+          },
+          {
+            "text": "ですか？",
+            "reading": "ですか？"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Compliment the food — say it's really delicious.",
+      "prompt": {
+        "ru": "Kono ryōri wa hontō ni oishii desu ne!",
+        "phonetic": "Koh-noh ryoh-ree wah hon-toh nee oy-shee-ee des-neh!",
+        "en": "This dish is really delicious!",
+        "native_script": "この料理は本当に美味しいですね！",
+        "tokens": [
+          {
+            "text": "この",
+            "reading": "この"
+          },
+          {
+            "text": "料理",
+            "reading": "りょうり"
+          },
+          {
+            "text": "は",
+            "reading": "は"
+          },
+          {
+            "text": "本当に",
+            "reading": "ほんとうに"
+          },
+          {
+            "text": "美味しい",
+            "reading": "おいしい"
+          },
+          {
+            "text": "ですね！",
+            "reading": "ですね！"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Say you should do this again sometime.",
+      "prompt": {
+        "ru": "Mata kondo issho ni nomimashō!",
+        "phonetic": "Mah-tah kon-doh eesh-show nee noh-mee-mah-shoh!",
+        "en": "Let's drink together again sometime!",
+        "native_script": "また今度一緒に飲みましょう！",
+        "tokens": [
+          {
+            "text": "また",
+            "reading": "また"
+          },
+          {
+            "text": "今度",
+            "reading": "こんど"
+          },
+          {
+            "text": "一緒に",
+            "reading": "いっしょに"
+          },
+          {
+            "text": "飲みましょう！",
+            "reading": "のみましょう！"
+          }
+        ]
+      }
+    }
+  ]
+}

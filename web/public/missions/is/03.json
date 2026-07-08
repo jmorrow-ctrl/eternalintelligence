@@ -1,0 +1,62 @@
+{
+  "id": "travel",
+  "title": "Ferðaskrifstofa",
+  "language": "is",
+  "setting": "A travel agency in downtown Reykjavík. 15:00. You need to arrange a multi-day tour of the Westfjords.",
+  "npc": {
+    "name": "Helga",
+    "personality": "experienced travel agent, professional and thorough. Excellent English but happy to speak Icelandic.",
+    "initialLine": "Góðan dag. Hvernig get ég aðstoðað þig?",
+    "initialTranslation": "Good day. How can I assist you?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Þú þarft að skipuleggja ferð um Vestfirði. Þú ferð á ferðaskrifstofu í Reykjavík og ræðir við Helgu um valkosti.",
+  "debriefEn": "You need to plan a trip to the Westfjords. You go to a travel agency in Reykjavík and discuss options with Helga.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the agent and say you're interested in a Westfjords tour.",
+      "prompt": {
+        "ru": "Góðan daginn. Ég hef áhuga á ferð um Vestfirði.",
+        "phonetic": "GOH-than dayg-in. Yeg hev OW-hu-ga ow ferth um VEST-fir-thi.",
+        "en": "Good day. I'm interested in a trip to the Westfjords."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask what tour packages they offer for four days.",
+      "prompt": {
+        "ru": "Hvaða ferðapakka bjóðið þið fyrir fjóra daga?",
+        "phonetic": "KVAH-tha FER-tha-pah-ka BYOH-thith thith FIR-ir FYO-ra DA-ga?",
+        "en": "What tour packages do you offer for four days?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask if accommodation and hotels are included.",
+      "prompt": {
+        "ru": "Er gisting innifalin? Hótel?",
+        "phonetic": "Er GISS-ting IN-ni-fa-lin? HOH-tel?",
+        "en": "Is accommodation included? Hotels?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask if there are discounts for two people.",
+      "prompt": {
+        "ru": "Eru afslættir fyrir tvær manneskjur?",
+        "phonetic": "EH-ru AV-slih-tir FIR-ir tvir MAN-nes-kyur?",
+        "en": "Are there discounts for two people?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Say you'll take the package and ask how to pay.",
+      "prompt": {
+        "ru": "Ég tek pakkann. Get ég borgað með korti?",
+        "phonetic": "Yeg tehk PAH-kan. Get yeg BOR-gath meth KOR-ti?",
+        "en": "I'll take the package. Can I pay by card?"
+      }
+    }
+  ]
+}

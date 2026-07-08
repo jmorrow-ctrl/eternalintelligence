@@ -1,0 +1,257 @@
+{
+  "id": "train-station",
+  "title": "火车站",
+  "language": "zh",
+  "setting": "Beijing West Railway Station, high-speed rail counter. 11:00. You need to buy a high-speed train ticket to Shanghai and negotiate with the ticket clerk.",
+  "npc": {
+    "name": "售票员 张 (Shòupiàoyuán Zhāng)",
+    "personality": "efficient ticket clerk, professional but helpful. Speaks quickly in standard Mandarin.",
+    "initialLine": "你好，买票吗？去哪里？",
+    "initialTranslation": "Hello, buying a ticket? Where to?"
+  },
+  "difficulty": "any",
+  "debriefRu": "你在北京西站。你需要买一张去上海的火车票。跟售票员沟通清楚你的需求。",
+  "debriefEn": "You are at Beijing West Station. You need to buy a train ticket to Shanghai. Communicate your needs clearly to the clerk.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet the clerk and say you want a ticket to Shanghai for tomorrow.",
+      "prompt": {
+        "ru": "Nín hǎo, wǒ xiǎng mǎi yī zhāng míngtiān qù Shànghǎi de piào.",
+        "phonetic": "Neen how, woh shyahng my ee jahng meeng-tyan chyoo Shahng-hai deh pyow.",
+        "en": "Hello, I'd like to buy one ticket to Shanghai for tomorrow.",
+        "native_script": "您好，我想买一张明天去上海的票。",
+        "tokens": [
+          {
+            "text": "您好",
+            "reading": "nín hǎo"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "我想买",
+            "reading": "wǒ xiǎng mǎi"
+          },
+          {
+            "text": "一张",
+            "reading": "yī zhāng"
+          },
+          {
+            "text": "明天",
+            "reading": "míngtiān"
+          },
+          {
+            "text": "去",
+            "reading": "qù"
+          },
+          {
+            "text": "上海",
+            "reading": "Shànghǎi"
+          },
+          {
+            "text": "的票",
+            "reading": "de piào"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask about departure times — are there morning trains?",
+      "prompt": {
+        "ru": "Qǐngwèn, yǒu zǎoshang chūfā de chēcì ma?",
+        "phonetic": "Cheeng-wun, yoh dzaow-shahng choo-fah deh chur-tsur mah?",
+        "en": "Excuse me, are there trains departing in the morning?",
+        "native_script": "请问，有早上出发的车次吗？",
+        "tokens": [
+          {
+            "text": "请问",
+            "reading": "qǐngwèn"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "有",
+            "reading": "yǒu"
+          },
+          {
+            "text": "早上",
+            "reading": "zǎoshang"
+          },
+          {
+            "text": "出发",
+            "reading": "chūfā"
+          },
+          {
+            "text": "的",
+            "reading": "de"
+          },
+          {
+            "text": "车次",
+            "reading": "chēcì"
+          },
+          {
+            "text": "吗",
+            "reading": "ma"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask about seat classes — how much more is a first-class seat than a second-class seat?",
+      "prompt": {
+        "ru": "Yīděng zuò bǐ èr děng zuò guì duōshao?",
+        "phonetic": "Ee-dung dzwor bee ur dung dzwor gway dwor-shaow?",
+        "en": "How much more expensive is a first-class seat than a second-class seat?",
+        "native_script": "一等座比二等座贵多少？",
+        "tokens": [
+          {
+            "text": "一等座",
+            "reading": "yīděng zuò"
+          },
+          {
+            "text": "比",
+            "reading": "bǐ"
+          },
+          {
+            "text": "二等座",
+            "reading": "èr děng zuò"
+          },
+          {
+            "text": "贵",
+            "reading": "guì"
+          },
+          {
+            "text": "多少",
+            "reading": "duōshao"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Say you'll take a second-class seat and ask which platform.",
+      "prompt": {
+        "ru": "Wǒ yào yī zhāng èr děng zuò. Zài nǎge zhàntái shàng chē?",
+        "phonetic": "Woh yaow ee jahng ur dung dzwor. Dzai nah-gur jan-tai shahng chur?",
+        "en": "I want a second-class seat. Which platform do I board from?",
+        "native_script": "我要一张二等座。在哪个站台上车？",
+        "tokens": [
+          {
+            "text": "我要",
+            "reading": "wǒ yào"
+          },
+          {
+            "text": "一张",
+            "reading": "yī zhāng"
+          },
+          {
+            "text": "二等座",
+            "reading": "èr děng zuò"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "在",
+            "reading": "zài"
+          },
+          {
+            "text": "哪个站台",
+            "reading": "nǎge zhàntái"
+          },
+          {
+            "text": "上车",
+            "reading": "shàng chē"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "The clerk says it leaves at 8 a.m. Pay and confirm the departure time.",
+      "prompt": {
+        "ru": "Hǎo de, gěi nín. Xièxiè! Nín shuō de shì míngtiān zǎoshang bā diǎn kāichē, duì ba?",
+        "phonetic": "How duh, gay neen. Syeh-syeh! Neen shwor duh shir meeng-tyan dzaow-shang bah dyan kigh-chur, dway bah?",
+        "en": "Okay, here you go. Thanks! You said it leaves at 8 o'clock tomorrow morning, right?",
+        "native_script": "好的，给您。谢谢！您说的是明天早上八点开车，对吧？",
+        "tokens": [
+          {
+            "text": "好的",
+            "reading": "hǎo de"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "给您",
+            "reading": "gěi nín"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "谢谢",
+            "reading": "xièxiè"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          },
+          {
+            "text": "您说的是",
+            "reading": "nín shuō de shì"
+          },
+          {
+            "text": "明天早上",
+            "reading": "míngtiān zǎoshang"
+          },
+          {
+            "text": "八点",
+            "reading": "bā diǎn"
+          },
+          {
+            "text": "开车",
+            "reading": "kāichē"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "对吧",
+            "reading": "duì ba"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    }
+  ]
+}

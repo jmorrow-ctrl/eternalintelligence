@@ -1,0 +1,62 @@
+{
+  "id": "museum",
+  "title": "Museum für Naturkunde",
+  "language": "de",
+  "setting": "The Museum of Natural History, Berlin. 14:00. You strike up a conversation with a fellow visitor about the exhibits.",
+  "npc": {
+    "name": "Dr. Klein",
+    "personality": "knowledgeable museum curator, passionate about natural history. Uses formal 'Sie'.",
+    "initialLine": "Interessieren Sie sich für Naturkunde?",
+    "initialTranslation": "Are you interested in natural history?"
+  },
+  "difficulty": "any",
+  "debriefRu": "Sie besuchen das Museum für Naturkunde in Berlin. Sie kommen mit einem Kurator ins Gespräch und fragen nach den Ausstellungen.",
+  "debriefEn": "You are visiting the Museum of Natural History in Berlin. You strike up a conversation with a curator and ask about the exhibits.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Say you're very interested — the dinosaur exhibit is impressive.",
+      "prompt": {
+        "ru": "Ganz und gar! Die Dinosaurier-Ausstellung ist beeindruckend.",
+        "phonetic": "Gants oont gar! Dee dee-no-SOW-ree-er OWS-shtel-loong ist be-EYEN-droo-kent.",
+        "en": "Absolutely! The dinosaur exhibition is impressive."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask how old the fossils are.",
+      "prompt": {
+        "ru": "Wie alt sind diese Fossilien eigentlich?",
+        "phonetic": "Vee alt zint DEE-ze fo-SEE-lee-en EYE-gent-likh?",
+        "en": "How old are these fossils, actually?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Ask how long the museum has been around.",
+      "prompt": {
+        "ru": "Seit wann gibt es dieses Museum?",
+        "phonetic": "Zayt van gip-t es DEE-zes moo-ZAY-oom?",
+        "en": "Since when has this museum existed?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask if they offer guided tours in English or German.",
+      "prompt": {
+        "ru": "Bieten Sie Führungen auf Englisch oder Deutsch an?",
+        "phonetic": "BEE-ten zee FOO-roong-en owf ENG-lish OH-der Doych an?",
+        "en": "Do you offer guided tours in English or German?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Thank them for the info and say you'll definitely come back.",
+      "prompt": {
+        "ru": "Vielen Dank für die Informationen. Ich komme auf jeden Fall wieder!",
+        "phonetic": "FEE-len Dank foor dee in-for-ma-TSYOH-nen. Ikh KOM-me owf YAY-den Fal VEE-der!",
+        "en": "Thank you very much for the information. I'll definitely come back!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "moscow-metro",
+  "title": "Линия 1 — Сокольническая",
+  "setting": "Moscow metro, Okhotny Ryad. 08:40. Packed car. Ask a tired commuter for directions.",
+  "npc": {
+    "name": "Commuter Yelena",
+    "personality": "tired, mildly impatient, basically helpful. Warms up if responses sound genuine. Speaks fast.",
+    "initialLine": "Слушаю.",
+    "initialTranslation": "Yeah? (lit. 'I'm listening.')"
+  },
+  "difficulty": "any",
+  "debriefRu": "Это ваше первое задание. Вы турист в Москве. Вы в метро. Вам нужно спросить дорогу к Большому театру. Используйте простые фразы: «Извините», «Спасибо», «Пожалуйста». Говорите медленно и чётко. Удачи!",
+  "debriefEn": "This is your first mission. You are a tourist in Moscow. You are in the metro. You need to ask for directions to the Bolshoi Theatre. Use simple phrases: 'Excuse me', 'Thank you', 'Please'. Speak slowly and clearly. Good luck!",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Ask a stranger if they know where the exit is to Bolshoi Theatre.",
+      "prompt": {
+        "ru": "Извините, вы не знаете, где выход к Большому театру?",
+        "phonetic": "Iz-vi-NI-tye, vy nye ZNA-ye-tye, gdye VY-khot k Bol-SHO-mu tye-AT-ru?",
+        "en": "Excuse me, do you know where the exit to the Bolshoi Theatre is?"
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "You didn't catch what they said — politely ask them to repeat it.",
+      "prompt": {
+        "ru": "Простите, не могли бы вы повторить? Я не совсем понял.",
+        "phonetic": "Pros-TI-tye, nye mag-LI by vy pov-ta-RIT? Ya nye sa-VSYEM po-NYAL.",
+        "en": "Sorry, could you repeat that? I didn't quite understand."
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Tell them you're a tourist and just arrived in Moscow.",
+      "prompt": {
+        "ru": "Я турист. Я только что приехал в Москву.",
+        "phonetic": "Ya too-REEST. Ya TOL-ka shto pri-YE-khal v Mask-VU.",
+        "en": "I'm a tourist. I just arrived in Moscow."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Thank them warmly for their help.",
+      "prompt": {
+        "ru": "Большое спасибо за помощь! Вы очень добры.",
+        "phonetic": "Bal-SHO-ye spa-SEE-ba za PO-mashch! Vy O-chen dob-RY.",
+        "en": "Thank you very much for your help! You're very kind."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Say goodbye and wish them a nice day.",
+      "prompt": {
+        "ru": "До свидания! Хорошего дня!",
+        "phonetic": "Da svi-DA-ni-ya! Kha-RO-she-vo DNYA!",
+        "en": "Goodbye! Have a nice day!"
+      }
+    }
+  ]
+}

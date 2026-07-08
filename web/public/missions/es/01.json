@@ -1,0 +1,82 @@
+{
+  "id": "market",
+  "title": "Mercado de San Telmo",
+  "language": "es",
+  "setting": "A bustling market in San Telmo, Buenos Aires. 10:00 AM. You need to buy fresh produce and practice your Spanish with local vendors.",
+  "npc": {
+    "name": "Señora Lupe",
+    "personality": "warm, talkative, patient with learners. Uses hand gestures. Speaks clearly but naturally with a bit of Argentine warmth.",
+    "initialLine": "¡Buenos días, che! ¿Qué te doy? Tengo naranjas recién llegadas, bien jugosas.",
+    "initialTranslation": "Good morning, mate! What can I get you? I have oranges that just arrived, really juicy."
+  },
+  "difficulty": "any",
+  "debriefRu": "Eres un turista en Buenos Aires. Estás en un mercado local y necesitas comprar fruta y verduras frescas. Usa frases corteses como 'por favor' y 'gracias'.",
+  "debriefEn": "You are a tourist in Buenos Aires. You are at a local market and need to buy fresh fruit and vegetables. Use polite phrases like 'por favor' and 'gracias'.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Respond to the vendor's offer. Ask how much a kilo of oranges costs.",
+      "prompt": {
+        "ru": "Buen día. ¿A cuánto está el kilo de naranjas?",
+        "phonetic": "Bwen DEE-a. A KWAN-to es-TA el KEE-lo de na-RAN-has?",
+        "en": "Good morning. How much is a kilo of oranges?"
+      },
+      "npcReply": {
+        "ru": "Están a quinientos pesos el kilo, che. Te las dejo a cuatrocientos si te llevás dos.",
+        "en": "They're 500 pesos a kilo, mate. I'll let them go for 400 if you take two kilos."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "The vendor says oranges are cheap today. Ask if she also has ripe avocados (palta) and how you can tell they're ready.",
+      "prompt": {
+        "ru": "¿Y tenés paltas? ¿Están listas para comer ya?",
+        "phonetic": "Ee te-NES PAL-tas? Es-TAN LEE-stas pa-ra ko-MER ya?",
+        "en": "And do you have avocados? Are they ready to eat now?"
+      },
+      "npcReply": {
+        "ru": "Sí, che, tengo paltas bien maduras. Apretá un poquito la puntita: si cede, están perfectas.",
+        "en": "Yes, mate, I have really ripe avocados. Press the little tip a bit: if it gives, they're perfect."
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "The vendor says the avocados are perfect. Say you'll take three oranges and two avocados, then ask for the total.",
+      "prompt": {
+        "ru": "Perfecto. Me llevo tres naranjas y dos paltas. ¿Cuánto es en total?",
+        "phonetic": "Per-FEK-to. Meh YEH-bo tres na-RAN-has ee dos PAL-tas. KWAN-to es en to-TAL?",
+        "en": "Perfect. I'll take three oranges and two avocados. How much is the total?"
+      },
+      "npcReply": {
+        "ru": "Tres naranjas son doscientos, y las dos paltas trescientos. Son quinientos en total, che.",
+        "en": "Three oranges are 200, and the two avocados 300. That's 500 total, mate."
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "The total is a bit high. Ask friendly if she can round it down a little since you come by every Saturday.",
+      "prompt": {
+        "ru": "¿Me podés redondear un poquito? Vengo todos los sábados por acá.",
+        "phonetic": "Meh po-DES re-don-de-AR un PO-kee-to? VEN-go TO-dos los SA-ba-dos po-ra a-KA.",
+        "en": "Can you round it down a little? I come by here every Saturday."
+      },
+      "npcReply": {
+        "ru": "Dale, che. Te lo dejo en cuatrocientos cincuenta. Así me ayudás a vender más tarde.",
+        "en": "Sure, mate. I'll let it go for 450. That way you help me sell more later."
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "She agrees. Thank her warmly, say you'll be back next week, and wish her a good day.",
+      "prompt": {
+        "ru": "Gracias, Lupe. Te veo la semana que viene. ¡Que tengas un lindo día!",
+        "phonetic": "GRA-syas, LOO-peh. Te VEH-o la se-MA-na ke VYE-neh. Ke TEN-gas un LEEN-do DEE-a!",
+        "en": "Thanks, Lupe. I'll see you next week. Have a nice day!"
+      },
+      "npcReply": {
+        "ru": "¡Gracias a vos, che! Nos vemos el sábado. Que disfrutes las paltas.",
+        "en": "Thanks to you, mate! See you Saturday. Enjoy the avocados."
+      }
+    }
+  ]
+}

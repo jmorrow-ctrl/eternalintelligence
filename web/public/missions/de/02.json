@@ -1,0 +1,62 @@
+{
+  "id": "restaurant",
+  "title": "Restaurant Zur Haxe",
+  "language": "de",
+  "setting": "A traditional Berlin restaurant. 19:00. You meet a colleague for dinner and need to order in German.",
+  "npc": {
+    "name": "Herr Weber",
+    "personality": "friendly colleague, uses casual 'du' at dinner. Warm and talkative.",
+    "initialLine": "Guten Abend! Schön, dass du Zeit hast!",
+    "initialTranslation": "Good evening! So nice you have time!"
+  },
+  "difficulty": "any",
+  "debriefRu": "Sie treffen sich mit einem Kollegen zum Abendessen in einem Berliner Restaurant. Bestellen Sie auf Deutsch und unterhalten Sie sich.",
+  "debriefEn": "You're meeting a colleague for dinner at a Berlin restaurant. Order in German and make conversation.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet your colleague and say it's nice to see them.",
+      "prompt": {
+        "ru": "Hallo! Schön, dass wir uns treffen.",
+        "phonetic": "HAH-loh! Shurn, dass veer oons TREFF-en.",
+        "en": "Hi! Great that we're meeting up."
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask how their week was.",
+      "prompt": {
+        "ru": "Wie war deine Woche?",
+        "phonetic": "Vee vahr DYNE VOH-khe?",
+        "en": "How was your week?"
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Say you're hungry and suggest looking at the menu.",
+      "prompt": {
+        "ru": "Ich habe Hunger. Sollen wir mal die Speisekarte anschauen?",
+        "phonetic": "Ikh HAH-be HOON-ger. ZOL-len veer mahl dee SHPY-ze-kar-te an-SHOW-en?",
+        "en": "I'm hungry. Should we look at the menu?"
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask what they recommend on the menu.",
+      "prompt": {
+        "ru": "Was kannst du empfehlen?",
+        "phonetic": "Vas kanst doo emp-FAY-len?",
+        "en": "What can you recommend?"
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Say you'll have the schnitzel and ask if they're ready to order.",
+      "prompt": {
+        "ru": "Ich nehme das Schnitzel. Bestellst du auch?",
+        "phonetic": "Ikh NAY-meh das SHNIT-sel. Be-SHTELST doo owkh?",
+        "en": "I'll have the schnitzel. Are you ordering too?"
+      }
+    }
+  ]
+}

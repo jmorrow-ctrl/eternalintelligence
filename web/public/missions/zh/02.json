@@ -1,0 +1,213 @@
+{
+  "id": "teahouse",
+  "title": "茶馆",
+  "language": "zh",
+  "setting": "A traditional tea house near Tiananmen Square. 14:30. You meet a new Chinese friend for tea and conversation.",
+  "npc": {
+    "name": "小李 (Xiǎo Lǐ)",
+    "personality": "friendly young professional, curious about foreigners. Uses relaxed Mandarin.",
+    "initialLine": "你来了！快请坐。想喝什么茶？",
+    "initialTranslation": "You're here! Please sit quickly. What tea would you like?"
+  },
+  "difficulty": "any",
+  "debriefRu": "你和一个中国朋友在茶馆见面。你们一起喝茶聊天。用中文聊你的近况。",
+  "debriefEn": "You meet a Chinese friend at a tea house. You drink tea and chat together. Talk about your life in Chinese.",
+  "turns": [
+    {
+      "id": 1,
+      "instruction": "Greet your friend and say it's great to see them.",
+      "prompt": {
+        "ru": "Xiǎo Lǐ, hǎojiǔ bùjiàn! Hěn gāoxìng jiàn dào nǐ.",
+        "phonetic": "Syaow Lee, how-jyoh boo-jyan! Hun gaow-shing jyan daow nee.",
+        "en": "Xiao Li, long time no see! Very happy to see you.",
+        "native_script": "小李，好久不见！很高兴见到你。",
+        "tokens": [
+          {
+            "text": "小李",
+            "reading": "Xiǎo Lǐ"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "好久不见",
+            "reading": "hǎojiǔ bùjiàn"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          },
+          {
+            "text": "很高兴",
+            "reading": "hěn gāoxìng"
+          },
+          {
+            "text": "见到你",
+            "reading": "jiàn dào nǐ"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "instruction": "Ask which tea they would recommend.",
+      "prompt": {
+        "ru": "Nǐ tuījiàn hē shénme chá?",
+        "phonetic": "Nee twee-jyan huh shun-muh chah?",
+        "en": "What tea would you recommend?",
+        "native_script": "你推荐喝什么茶？",
+        "tokens": [
+          {
+            "text": "你",
+            "reading": "nǐ"
+          },
+          {
+            "text": "推荐",
+            "reading": "tuījiàn"
+          },
+          {
+            "text": "喝",
+            "reading": "hē"
+          },
+          {
+            "text": "什么",
+            "reading": "shénme"
+          },
+          {
+            "text": "茶",
+            "reading": "chá"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "instruction": "Say you'll try jasmine tea and ask how their week has been.",
+      "prompt": {
+        "ru": "Wǒ xiǎng chángshì yīxià mòlìhuā chá. Nǐ zuìjìn zěnme yàng?",
+        "phonetic": "Woh shyahng chahng-shir ee-shyah mwoh-lee-hwah chah. Nee dzway-jin dzun-muh yahng?",
+        "en": "I'd like to try jasmine tea. How have you been lately?",
+        "native_script": "我想尝试一下茉莉花茶。你最近怎么样？",
+        "tokens": [
+          {
+            "text": "我想",
+            "reading": "wǒ xiǎng"
+          },
+          {
+            "text": "尝试",
+            "reading": "chángshì"
+          },
+          {
+            "text": "一下",
+            "reading": "yīxià"
+          },
+          {
+            "text": "茉莉花茶",
+            "reading": "mòlìhuā chá"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "你最近",
+            "reading": "nǐ zuìjìn"
+          },
+          {
+            "text": "怎么样",
+            "reading": "zěnme yàng"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "instruction": "Ask how their parents have been.",
+      "prompt": {
+        "ru": "Nǐ fùmǔ zuìjìn zěnme yàng?",
+        "phonetic": "Nee foo-moo dzway-jin dzun-muh yahng?",
+        "en": "How have your parents been lately?",
+        "native_script": "你父母最近怎么样？",
+        "tokens": [
+          {
+            "text": "你父母",
+            "reading": "nǐ fùmǔ"
+          },
+          {
+            "text": "最近",
+            "reading": "zuìjìn"
+          },
+          {
+            "text": "怎么样",
+            "reading": "zěnme yàng"
+          },
+          {
+            "text": "？",
+            "reading": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "instruction": "Say you have to go, thank them for the tea — next time is your treat.",
+      "prompt": {
+        "ru": "Wǒ děi zǒu le. Xièxiè nǐ de chá, xià cì wǒ qǐng!",
+        "phonetic": "Woh day dzoh luh. Syeh-syeh nee deh chah, shyah tswur woh cheeng!",
+        "en": "I have to go. Thanks for the tea, next time I'll treat!",
+        "native_script": "我得走了。谢谢你的茶，下次我请！",
+        "tokens": [
+          {
+            "text": "我得",
+            "reading": "wǒ děi"
+          },
+          {
+            "text": "走了",
+            "reading": "zǒu le"
+          },
+          {
+            "text": "。",
+            "reading": ""
+          },
+          {
+            "text": "谢谢",
+            "reading": "xièxiè"
+          },
+          {
+            "text": "你的茶",
+            "reading": "nǐ de chá"
+          },
+          {
+            "text": "，",
+            "reading": ""
+          },
+          {
+            "text": "下次",
+            "reading": "xià cì"
+          },
+          {
+            "text": "我请",
+            "reading": "wǒ qǐng"
+          },
+          {
+            "text": "！",
+            "reading": ""
+          }
+        ]
+      }
+    }
+  ]
+}
