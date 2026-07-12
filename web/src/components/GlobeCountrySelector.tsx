@@ -55,9 +55,12 @@ const VIEW_SIZE = 600;
 const RADIUS = VIEW_SIZE / 2 - 2;
 const AUTO_ROTATE_DELAY_MS = 1500;
 const DEG_PER_SEC = 6;
+// Centered so Buenos Aires, Reykjavik, Paris, Berlin, and Moscow are all
+// visible at once, tilted toward the northern hemisphere (positive latitude).
+const DEFAULT_ROTATION: [number, number] = [-20, 22];
 
 export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorProps) {
-  const [rotation, setRotation] = useState<[number, number]>([0, -15]);
+  const [rotation, setRotation] = useState<[number, number]>(DEFAULT_ROTATION);
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [hoveredCode, setHoveredCode] = useState<string | null>(null);
@@ -66,7 +69,7 @@ export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorP
   const [outlinePath, setOutlinePath] = useState<string>('');
   const [graticulePath, setGraticulePath] = useState<string>('');
   const dragStart = useRef({ x: 0, y: 0 });
-  const rotationStart = useRef<[number, number]>([0, -15]);
+  const rotationStart = useRef<[number, number]>(DEFAULT_ROTATION);
   const containerRef = useRef<HTMLDivElement>(null);
   const autoRotateActiveRef = useRef(true);
   const resumeTimeoutRef = useRef<number | null>(null);
@@ -145,7 +148,7 @@ export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorP
 
     const safeRotation = (lon: number, lat: number): [number, number] => {
       if (!Number.isFinite(lon) || !Number.isFinite(lat)) {
-        return [0, -15];
+        return DEFAULT_ROTATION;
       }
       return [normalizeLon(lon), Math.max(-80, Math.min(80, lat))];
     };
@@ -159,7 +162,7 @@ export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorP
           if (!Number.isFinite(currentLon) || !Number.isFinite(currentLat)) {
             targetRotationRef.current = null;
             isAnimatingRef.current = false;
-            return [0, -15];
+            return DEFAULT_ROTATION;
           }
           const target = targetRotationRef.current;
           if (!target) return safeRotation(currentLon, currentLat);
@@ -261,6 +264,7 @@ export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorP
         <p className="globe-sub">Drag the globe and select a highlighted city for your mission.</p>
       </div>
 
+      <div className="globe-layout">
       <div
         className="globe-stage"
         ref={containerRef}
@@ -334,6 +338,26 @@ export function GlobeCountrySelector({ onSelect, onBack }: GlobeCountrySelectorP
               );
             })}
           </svg>
+        </div>
+      </div>
+
+        <div className="globe-chip-list">
+          {COUNTRIES.map((country) => {
+            const hovered = hoveredCode === country.code;
+            const isSelected = selectedCode === country.code;
+            return (
+              <button
+                key={country.code}
+                className={`globe-chip ${isSelected ? 'selected' : ''} ${hovered ? 'hovered' : ''}`}
+                onClick={() => handlePinClick(country.code)}
+                onMouseEnter={() => setHoveredCode(country.code)}
+                onMouseLeave={() => setHoveredCode(null)}
+              >
+                <span className="globe-chip-flag">{country.flag}</span>
+                <span className="globe-chip-name">{country.countryCode}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 

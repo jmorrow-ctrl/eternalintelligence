@@ -545,12 +545,12 @@ function DebriefScreen({ mission, onBegin, onBack }: {
       <div className="debrief-body">
         <p className="debrief-ru">{mission.debriefRu}</p>
         {showEn && <p className="debrief-en">{mission.debriefEn}</p>}
-      </div>
-      <div className="debrief-actions">
-        <button className="back-btn" onClick={onBack}>[ BACK ]</button>
         <button className="translate-btn" onClick={() => setShowEn((v) => !v)}>
           [{showEn ? 'HIDE' : 'SHOW'} TRANSLATION]
         </button>
+      </div>
+      <div className="debrief-actions">
+        <button className="back-btn" onClick={onBack}>[ BACK ]</button>
         <button className="next-btn" onClick={onBegin}>[ BEGIN MISSION ]</button>
       </div>
     </div>
