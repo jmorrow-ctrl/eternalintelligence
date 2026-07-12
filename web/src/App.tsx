@@ -18,9 +18,9 @@ import type { LanguageConfig } from './languages/config';
 import './App.css';
 
 const DIFFICULTY_OPTIONS: Record<string, { label: string; desc: string }> = {
-  beginner: { label: 'Beginner', desc: 'Pronunciation guide' },
-  intermediate: { label: 'Intermediate', desc: 'Native text only' },
-  advanced: { label: 'Advanced', desc: 'English objective' },
+  beginner: { label: 'Novice', desc: 'Pronunciation guide' },
+  intermediate: { label: 'Seasoned', desc: 'Native text only' },
+  advanced: { label: 'Veteran', desc: 'English objective' },
 };
 
 const DIFFICULTY_KEYS = Object.keys(DIFFICULTY_OPTIONS) as ('beginner' | 'intermediate' | 'advanced')[];
@@ -146,7 +146,10 @@ function TerminalMenu({ onSelect, coverIdentity, language }: {
   coverIdentity: string;
   language: LanguageConfig;
 }) {
-  const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
+  const [stage, setStage] = useState<'mission' | 'difficulty'>('mission');
+  const [missionCursor, setMissionCursor] = useState(0);
+  const [selectedMissionKey, setSelectedMissionKey] = useState<'beginner' | 'intermediate' | 'advanced' | null>(null);
+  const [difficultyCursor, setDifficultyCursor] = useState(0);
   const [bannerChars, setBannerChars] = useState(ASCII_BANNER);
   const [breathOffset, setBreathOffset] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -234,8 +237,48 @@ function TerminalMenu({ onSelect, coverIdentity, language }: {
 
   const currentTitle = TITLE_TRANSLATIONS[titleIndex];
 
+  const selectMissionAt = (index: number) => {
+    const dk = DIFFICULTY_KEYS[index];
+    setMissionCursor(index);
+    setSelectedMissionKey(dk);
+    setDifficultyCursor(0);
+    setStage('difficulty');
+  };
+
+  const selectDifficultyAt = (index: number) => {
+    if (!selectedMissionKey) return;
+    const subDk = DIFFICULTY_KEYS[index];
+    setDifficultyCursor(index);
+    onSelect(`${language.code}/${DIFF_FILES[selectedMissionKey]}`, subDk);
+  };
+
+  const goBackToMission = () => {
+    setStage('mission');
+    setSelectedMissionKey(null);
+  };
+
+  const handleMenuKeyDown = (e: React.KeyboardEvent) => {
+    const cursor = stage === 'mission' ? missionCursor : difficultyCursor;
+    const setCursor = stage === 'mission' ? setMissionCursor : setDifficultyCursor;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setCursor((cursor + 1) % DIFFICULTY_KEYS.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setCursor((cursor - 1 + DIFFICULTY_KEYS.length) % DIFFICULTY_KEYS.length);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (stage === 'mission') selectMissionAt(missionCursor);
+      else selectDifficultyAt(difficultyCursor);
+    } else if ((e.key === 'Escape' || e.key === 'Backspace') && stage === 'difficulty') {
+      e.preventDefault();
+      goBackToMission();
+    }
+  };
+
   return (
-    <div className="terminal-menu" ref={menuRef} tabIndex={0}>
+    <div className="terminal-menu" ref={menuRef} tabIndex={0} onKeyDown={handleMenuKeyDown}>
       <div className="ascii-banner-container">
         <pre className="ascii-banner">{spacedBanner.join('\n')}</pre>
       </div>
@@ -265,52 +308,77 @@ function TerminalMenu({ onSelect, coverIdentity, language }: {
 
       <div className="terminal-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
 
-      <div className="terminal-difficulty-label">SELECT MISSION:</div>
-
-      <div className="terminal-level-list">
-        {DIFFICULTY_KEYS.map((dk, i) => {
-          const theme = language.missionThemes[dk];
-          return (
-            <div key={dk} className="terminal-level-row">
-              <button
-                className={`terminal-level-btn ${selectedLevel === dk ? 'active' : ''}`}
-                onClick={() => setSelectedLevel(dk === selectedLevel ? null : dk)}
-              >
-                <span className="terminal-diff-bracket">[</span>
-                <span className="terminal-diff-key">{i + 1}</span>
-                <span className="terminal-diff-bracket">]</span>
-                <span className="terminal-diff-label"> {theme.title}</span>
-              </button>
-
-              {selectedLevel === dk && (
-                <div className="terminal-diff-sub">
-                  {DIFFICULTY_KEYS.map((subDk, di) => (
-                    <button
-                      key={subDk}
-                      className="terminal-sub-btn"
-                      onClick={() => onSelect(`${language.code}/${DIFF_FILES[dk]}`, subDk)}
-                    >
-                      <span className="terminal-diff-bracket">[</span>
-                      <span className="terminal-diff-key">{String.fromCharCode(65 + di)}</span>
-                      <span className="terminal-diff-bracket">]</span>
-                      <span className="terminal-diff-label"> {DIFFICULTY_OPTIONS[subDk].label}</span>
-                      <span className="terminal-diff-desc">{DIFFICULTY_OPTIONS[subDk].desc}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="terminal-prompt">
+      <div className="terminal-prompt-line">
         <span className="terminal-prompt-user">agent@eternal-intelligence</span>
         <span className="terminal-prompt-sep">:</span>
         <span className="terminal-prompt-path">~</span>
         <span className="terminal-prompt-sep">$</span>
-        <span className={`terminal-prompt-cursor ${showCursor ? 'visible' : ''}`}>█</span>
+        <span className="terminal-prompt-cmd"> select-mission</span>
       </div>
+
+      {stage === 'mission' ? (
+        <div className="terminal-select-list">
+          {DIFFICULTY_KEYS.map((dk, i) => {
+            const theme = language.missionThemes[dk];
+            const active = missionCursor === i;
+            return (
+              <div
+                key={dk}
+                className={`terminal-select-row ${active ? 'active' : ''}`}
+                onMouseEnter={() => setMissionCursor(i)}
+                onClick={() => selectMissionAt(i)}
+              >
+                <span className="terminal-select-caret">{active ? '>' : ' '}</span>
+                <span className="terminal-select-index">[{i + 1}]</span>
+                <span className="terminal-select-label">{theme.title}</span>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <>
+          <div className="terminal-select-list terminal-select-locked">
+            <div className="terminal-select-row locked">
+              <span className="terminal-select-caret">✓</span>
+              <span className="terminal-select-label">
+                {selectedMissionKey && language.missionThemes[selectedMissionKey].title}
+              </span>
+            </div>
+          </div>
+
+          <div className="terminal-prompt-line">
+            <span className="terminal-prompt-user">agent@eternal-intelligence</span>
+            <span className="terminal-prompt-sep">:</span>
+            <span className="terminal-prompt-path">~</span>
+            <span className="terminal-prompt-sep">$</span>
+            <span className="terminal-prompt-cmd"> select-difficulty</span>
+          </div>
+
+          <div className="terminal-select-list">
+            {DIFFICULTY_KEYS.map((subDk, i) => {
+              const active = difficultyCursor === i;
+              return (
+                <div
+                  key={subDk}
+                  className={`terminal-select-row ${active ? 'active' : ''}`}
+                  onMouseEnter={() => setDifficultyCursor(i)}
+                  onClick={() => selectDifficultyAt(i)}
+                >
+                  <span className="terminal-select-caret">{active ? '>' : ' '}</span>
+                  <span className="terminal-select-index">[{i + 1}]</span>
+                  <span className="terminal-select-label">{DIFFICULTY_OPTIONS[subDk].label}</span>
+                  <span className="terminal-select-desc"> — {DIFFICULTY_OPTIONS[subDk].desc}</span>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      <div className="terminal-hint">
+        [↑/↓] navigate &nbsp; [enter] select{stage === 'difficulty' ? '   [esc] back' : ''}
+      </div>
+
     </div>
   );
 }
