@@ -1320,6 +1320,31 @@ body.terminal-mode {
   font-size: 0.85rem;
 }
 
+/* ─── Terminal Prompt (reusable) ───────────── */
+
+.term-prompt {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  width: 100%;
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+}
+
+.term-tag {
+  font-size: 0.65rem;
+  color: #fecf5e;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.term-user-path {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  font-size: 0.75rem;
+}
+
 /* ─── Game Header ──────────────────────────── */
 
 .game-view {

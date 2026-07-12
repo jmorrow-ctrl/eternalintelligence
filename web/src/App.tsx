@@ -413,9 +413,11 @@ function SuspicionBar({ value }: { value: number }) {
   );
 }
 
-function ScoreCard({ grade, turn }: {
+function ScoreCard({ grade, turnNumber, targetLine, targetTranslation }: {
   grade: import('./shared/game/grader').GradeResult;
-  turn: number;
+  turnNumber: number;
+  targetLine?: string;
+  targetTranslation?: string;
 }) {
   const scoreColor = grade.pronunciation_score >= 80 ? '#00ff41'
     : grade.pronunciation_score >= 60 ? '#fecf5e'
@@ -425,7 +427,7 @@ function ScoreCard({ grade, turn }: {
 
   return (
     <div className="score-card">
-      <div className="score-header">TURN {turn} — RESULTS</div>
+      <div className="score-header">TURN {turnNumber} — RESULTS</div>
       <div className="score-row">
         <span className="score-label">SCORE</span>
         <span className="score-value" style={{ color: scoreColor }}>{grade.pronunciation_score}/100</span>
@@ -442,6 +444,18 @@ function ScoreCard({ grade, turn }: {
         <div className="score-row">
           <span className="score-label">TIP</span>
           <span className="score-tip">{grade.coaching_tip}</span>
+        </div>
+      )}
+      {targetLine && (
+        <div className="score-row">
+          <span className="score-label">TARGET</span>
+          <span className="score-note">{targetLine}</span>
+        </div>
+      )}
+      {targetTranslation && (
+        <div className="score-row">
+          <span className="score-label">EN</span>
+          <span className="score-note">{targetTranslation}</span>
         </div>
       )}
     </div>
@@ -600,6 +614,18 @@ function ResponseInput({ onSubmit, noSpeech, languageCode }: { onSubmit: (text: 
   );
 }
 
+function TerminalPrompt({ cmd }: { cmd: string }) {
+  return (
+    <div className="term-prompt">
+      <span className="terminal-prompt-user">agent@eternal-intelligence</span>
+      <span className="terminal-prompt-sep">:</span>
+      <span className="terminal-prompt-path">~</span>
+      <span className="terminal-prompt-sep">$</span>
+      <span className="terminal-prompt-cmd"> {cmd}</span>
+    </div>
+  );
+}
+
 function DebriefScreen({ mission, onBegin, onBack }: {
   mission: Mission;
   onBegin: () => void;
@@ -610,6 +636,7 @@ function DebriefScreen({ mission, onBegin, onBack }: {
     <div className="debrief-screen">
       <h2 className="debrief-title">{mission.title}</h2>
       <div className="debrief-setting">{mission.setting}</div>
+      <TerminalPrompt cmd="cat briefing.txt" />
       <div className="debrief-body">
         <p className="debrief-ru">{mission.debriefRu}</p>
         {showEn && <p className="debrief-en">{mission.debriefEn}</p>}
@@ -635,12 +662,10 @@ type ChatEntry = {
 function GameView({
   game,
   noSpeech,
-  coverIdentity,
   language,
 }: {
   game: ReturnType<typeof useGameLoop>;
   noSpeech: boolean;
-  coverIdentity: string;
   language: LanguageConfig;
 }) {
   const { phase, mission, state, grade, isSpeaking } = game;
@@ -722,6 +747,7 @@ function GameView({
     return (
       <div className="game-view">
         <div className="recap-screen">
+          <TerminalPrompt cmd="recap --summary" />
           <Recap history={state!.history} />
           <button className="back-btn" onClick={game.backToMenu}>[ BACK TO MENU ]</button>
         </div>
@@ -745,6 +771,7 @@ function GameView({
     return (
       <div className="game-view">
         <div className="game-over">
+          <TerminalPrompt cmd="status --alert" />
           <h1>МИССИЯ ПРОВАЛЕНА</h1>
           <p>You have been compromised.</p>
           <Recap history={state!.history} />
@@ -771,12 +798,15 @@ function GameView({
           entry.type === 'npc' ? (
             <div key={i} className="chat-row npc-row">
               <div className="chat-header">
+                <span className="term-tag">[RECV]</span>
                 <span className="chat-name">{mission!.npc.name.split(' ').slice(1).join(' ') || mission!.npc.name}</span>
                 <span className="chat-title">{mission!.npc.name.split(' ')[0]}</span>
               </div>
               <div className={`chat-bubble ${isSpeaking && i === chatHistory.length - 1 ? 'speaking' : ''}`}>
                 <div className="npc-line">{entry.line}</div>
-                {entry.translation && <div className="npc-translation">{entry.translation}</div>}
+                {state!.difficulty === 'beginner' && entry.translation && (
+                  <div className="npc-translation">// {entry.translation}</div>
+                )}
                 <button
                   className="replay-btn"
                   onClick={() => { game.setIsSpeaking(true); ttsSpeak(entry.line, language.sttLocale).finally(() => game.setIsSpeaking(false)); }}
@@ -789,7 +819,12 @@ function GameView({
           ) : (
             <div key={i} className="chat-row user-row">
               <div className="chat-header user-header">
-                <span className="chat-name">COVER: {coverIdentity.toUpperCase()}</span>
+                <span className="term-user-path">
+                  <span className="terminal-prompt-user">agent@eternal-intelligence</span>
+                  <span className="terminal-prompt-sep">:</span>
+                  <span className="terminal-prompt-path">~</span>
+                  <span className="terminal-prompt-sep">$</span>
+                </span>
               </div>
               <div className="chat-bubble user-bubble">
                 <div className="user-line">{entry.line}</div>
@@ -802,6 +837,7 @@ function GameView({
 
       {phase === 'turn_start' && turn && showPrompt && (
         <div className="prompt-section">
+          <TerminalPrompt cmd={`respond --lang=${language.code} --mode=${state!.difficulty}`} />
           <div className="prompt-header">
             YOUR LINE
             <span className="lang-badge">{language.flag}</span>
@@ -855,15 +891,14 @@ function GameView({
 
       {phase === 'results' && showScore && grade && turn && (
         <div className="result-section">
+          <TerminalPrompt cmd="evaluate-response" />
           <VisualCues prompt={turn.prompt.ru} />
-          <ScoreCard grade={grade} turn={state!.currentTurn} />
-
-          {state!.difficulty === 'beginner' && (
-            <div className="target-translation-feedback">
-              <p className="target-line">{turn.prompt.ru}</p>
-              <p className="target-translation">{turn.prompt.en}</p>
-            </div>
-          )}
+          <ScoreCard
+            grade={grade}
+            turnNumber={state!.currentTurn}
+            targetLine={turn.prompt.ru}
+            targetTranslation={state!.difficulty === 'beginner' ? turn.prompt.en : undefined}
+          />
 
           <button className="next-btn" onClick={handleNextTurn}>
             [{state!.currentTurn >= state!.totalTurns ? 'SEE RECAP' : 'NEXT TURN'}]
@@ -990,7 +1025,6 @@ function App() {
         <GameView
           game={game}
           noSpeech={noSpeech}
-          coverIdentity={coverIdentity}
           language={language}
         />
       )}
